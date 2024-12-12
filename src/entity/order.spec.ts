@@ -25,11 +25,18 @@ describe ("Order unit tests", () => {
     })
 
     it("should calculate total", () => {
-        const item1 = new OrderItem("1", "Cerveja", 20, 1);
-        const item2 = new OrderItem("2", "Refri", 10, 1);
-        const item3 = new OrderItem("3", "Lanche", 30, 1);
+        const item1 = new OrderItem("1", "Cerveja", 20, "p1", 2);
+        const item2 = new OrderItem("2", "Refri", 10, "p2", 2);
+        const item3 = new OrderItem("3", "Lanche", 30, "p3", 2);
         let order = new Order("1", "123", [item1, item2, item3]);
         const total = order.total();
-        expect(total).toBe(60);
+        expect(total).toBe(120);
+    })
+
+    it("should throw error if the qtd is less or equal 0", () => {
+        expect(() => {
+            const item1 = new OrderItem("1", "Cerveja", 20, "p1", 0);
+            let order = new Order("1", "123", [item1]);
+        }).toThrow("Quantity must be greater than 0");
     })
 }) 
