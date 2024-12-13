@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1734113933606" clover="3.2.0">
-  <project timestamp="1734113933606" name="All files">
+<coverage generated="1734122210672" clover="3.2.0">
+  <project timestamp="1734122210672" name="All files">
     <metrics statements="204" coveredstatements="198" conditionals="46" coveredconditionals="46" methods="25" coveredmethods="22" elements="275" coveredelements="266" complexity="0" loc="204" ncloc="204" packages="1" files="5" classes="5"/>
     <file name="address.ts" path="C:\workspace\fullcycle\ddd\src\entity\address.ts">
       <metrics statements="29" coveredstatements="29" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
