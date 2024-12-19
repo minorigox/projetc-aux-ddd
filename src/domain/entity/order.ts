@@ -38,4 +38,8 @@ export default class Order {
 
         return true;
     }
+
+    get id(): string {
+        return this._id;
+    }
 }
