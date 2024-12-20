@@ -1,9 +1,8 @@
 import { BelongsTo, Column, ForeignKey, HasMany, Model, PrimaryKey, Table } from "sequelize-typescript";
 import CustomerModel from "./customer.model";
-import OrderItem from "../../../../domain/entity/order_item";
 import OrderItemModel from "./order-item.model";
 
-@Table({
+@Table({    
     tableName: "orders",
     timestamps: false,
 })

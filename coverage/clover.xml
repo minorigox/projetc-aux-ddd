@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1734619045285" clover="3.2.0">
-  <project timestamp="1734619045286" name="All files">
-    <metrics statements="437" coveredstatements="433" conditionals="77" coveredconditionals="76" methods="44" coveredmethods="43" elements="558" coveredelements="552" complexity="0" loc="437" ncloc="437" packages="4" files="11" classes="11"/>
+<coverage generated="1734689144707" clover="3.2.0">
+  <project timestamp="1734689144708" name="All files">
+    <metrics statements="460" coveredstatements="444" conditionals="77" coveredconditionals="76" methods="50" coveredmethods="43" elements="587" coveredelements="563" complexity="0" loc="460" ncloc="460" packages="4" files="11" classes="11"/>
     <package name="domain.entity">
-      <metrics statements="237" coveredstatements="235" conditionals="60" coveredconditionals="60" methods="33" coveredmethods="32"/>
+      <metrics statements="261" coveredstatements="247" conditionals="60" coveredconditionals="60" methods="39" coveredmethods="32"/>
       <file name="address.ts" path="C:\workspace\fullcycle\ddd\src\domain\entity\address.ts">
         <metrics statements="45" coveredstatements="45" conditionals="13" coveredconditionals="13" methods="6" coveredmethods="6"/>
         <line num="1" count="1" type="stmt"/>
@@ -129,7 +129,7 @@
         <line num="73" count="1" type="stmt"/>
       </file>
       <file name="order.ts" path="C:\workspace\fullcycle\ddd\src\domain\entity\order.ts">
-        <metrics statements="41" coveredstatements="41" conditionals="13" coveredconditionals="13" methods="3" coveredmethods="3"/>
+        <metrics statements="53" coveredstatements="47" conditionals="13" coveredconditionals="13" methods="6" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -171,9 +171,21 @@
         <line num="39" count="4" type="stmt"/>
         <line num="40" count="4" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
       </file>
       <file name="order_item.ts" path="C:\workspace\fullcycle\ddd\src\domain\entity\order_item.ts">
-        <metrics statements="28" coveredstatements="26" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="3"/>
+        <metrics statements="40" coveredstatements="32" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -202,6 +214,18 @@
         <line num="26" count="14" type="stmt"/>
         <line num="27" count="14" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
       </file>
       <file name="product.ts" path="C:\workspace\fullcycle\ddd\src\domain\entity\product.ts">
         <metrics statements="50" coveredstatements="50" conditionals="13" coveredconditionals="13" methods="7" coveredmethods="7"/>
@@ -297,9 +321,9 @@
       </file>
     </package>
     <package name="infrastructure.db.sequelize.model">
-      <metrics statements="52" coveredstatements="52" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="51" coveredstatements="51" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="customer.model.ts" path="C:\workspace\fullcycle\ddd\src\infrastructure\db\sequelize\model\customer.model.ts">
-        <metrics statements="34" coveredstatements="34" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="33" coveredstatements="33" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -333,7 +357,6 @@
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
       </file>
       <file name="product.model.ts" path="C:\workspace\fullcycle\ddd\src\infrastructure\db\sequelize\model\product.model.ts">
         <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

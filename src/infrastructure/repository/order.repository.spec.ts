@@ -10,6 +10,7 @@ import ProductRepository from "./product.repository";
 import Product from "../../domain/entity/product";
 import OrderItem from "../../domain/entity/order_item";
 import Order from "../../domain/entity/order";
+import OrderRepository from "./order.repository";
 
 describe("Order repository unit tests", () => {
     let sequelize: Sequelize;
@@ -44,7 +45,7 @@ describe("Order repository unit tests", () => {
             
             const order = new Order("1", customer.id, [orderItem]);
 
-            const orderRepository = new OrderResitory();
+            const orderRepository = new OrderRepository();
             await orderRepository.create(order);
 
             const orderModel = await OrderModel.findOne({

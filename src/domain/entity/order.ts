@@ -42,4 +42,12 @@ export default class Order {
     get id(): string {
         return this._id;
     }
+
+    get customer_id(): string {
+        return this._customerId;
+    }
+
+    get items(): OrderItem[] {
+        return this._items;
+    }
 }
