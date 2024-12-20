@@ -1,9 +1,9 @@
-import { BelongsTo, Column, ForeignKey, Model, PrimaryKey, Table } from "sequelize-typescript";
-import ProductModel from "./product.model";
+import { Table, Model, PrimaryKey, Column, ForeignKey, BelongsTo } from "sequelize-typescript";
 import OrderModel from "./order.model";
+import ProductModel from "./product.model";
 
 @Table({
-    tableName: "order-items",
+    tableName: "order_items",
     timestamps: false,
 })
 
@@ -30,8 +30,8 @@ export default class OrderItemModel extends Model {
     declare quantity: number;
 
     @Column({ allowNull: false })
-    declare product_name: string;
+    declare name: string;
 
     @Column({ allowNull: false })
-    declare product_price: number;
-}
+    declare price: number;
+}  
