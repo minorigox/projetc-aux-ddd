@@ -1,8 +1,10 @@
 import Order from "../../domain/entity/order";
+import OrderItem from "../../domain/entity/order_item";
+import OrderRepositoryInterface from "../../domain/repository/order-repository.interface";
 import OrderItemModel from "../db/sequelize/model/order-item.model";
 import OrderModel from "../db/sequelize/model/order.model";
 
-export default class OrderRepository {
+export default class OrderRepository implements OrderRepositoryInterface {
     async create(entity: Order): Promise < void > {
         await OrderModel.create({
             id: entity.id,
@@ -20,14 +22,49 @@ export default class OrderRepository {
             include: [{ model: OrderItemModel }]
         })
     }
-    update(entity: Order): Promise<void> {
-        throw new Error("Method not implemented.");
+    async update(entity: Order): Promise < void > {
+        items: entity.items.map((item) => ({
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            productId: item.product_id,
+            quantity: item.quantity,
+        }),
+        {
+            where: {
+                id: entity.id,
+            }
+        })
     }
-    find(id: string): Promise<Order> {
-        throw new Error("Method not implemented.");
+
+    async find(id: string): Promise < Order > {
+        const orderModel = await OrderModel.findOne({
+            where: { id: id },
+            include: ["items"]
+        });
+        const orderItems = orderModel.items.map((item) => {
+            let orderItem = new OrderItem(
+                item.id, item.name, item.price,
+                item.product_id, item.quantity,
+            )
+            return orderItem;
+        })
+        return new Order(orderModel.id, orderModel.customer_id, orderItems);
     }
-    findAll(): Promise<Order[]> {
-        throw new Error("Method not implemented.");
+
+    async findAll(): Promise < Order[] > {
+        const ordersModel = await OrderModel.findAll({ include: ["items"] });
+        const orders = ordersModel.map((order) => {
+            let o = new Order(order.id, order.customer_id, 
+                order.items.map((item) => {
+                    let i = new OrderItem(item.id, item.name,
+                        item.price, item.product_id, item.quantity);
+                    return i;
+                })
+            )
+            return o;
+        })
+        return orders;
     }
 
 }
