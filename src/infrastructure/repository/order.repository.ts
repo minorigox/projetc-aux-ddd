@@ -22,6 +22,7 @@ export default class OrderRepository implements OrderRepositoryInterface {
             include: [{ model: OrderItemModel }]
         })
     }
+    
     async update(entity: Order): Promise < void > {
         items: entity.items.map((item) => ({
             id: item.id,
