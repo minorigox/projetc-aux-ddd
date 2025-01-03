@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1735910516492" clover="3.2.0">
-  <project timestamp="1735910516492" name="All files">
-    <metrics statements="641" coveredstatements="631" conditionals="102" coveredconditionals="101" methods="61" coveredmethods="57" elements="804" coveredelements="789" complexity="0" loc="641" ncloc="641" packages="6" files="16" classes="16"/>
+<coverage generated="1735936229038" clover="3.2.0">
+  <project timestamp="1735936229038" name="All files">
+    <metrics statements="648" coveredstatements="642" conditionals="104" coveredconditionals="103" methods="61" coveredmethods="59" elements="813" coveredelements="804" complexity="0" loc="648" ncloc="648" packages="6" files="16" classes="16"/>
     <package name="domain.entity">
       <metrics statements="261" coveredstatements="261" conditionals="67" coveredconditionals="67" methods="39" coveredmethods="39"/>
       <file name="address.ts" path="C:\workspace\fullcycle\ddd\src\domain\entity\address.ts">
@@ -282,9 +282,9 @@
       </file>
     </package>
     <package name="domain.event">
-      <metrics statements="29" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="2"/>
+      <metrics statements="36" coveredstatements="34" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="4"/>
       <file name="event-dispatcher.ts" path="C:\workspace\fullcycle\ddd\src\domain\event\event-dispatcher.ts">
-        <metrics statements="29" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="2"/>
+        <metrics statements="36" coveredstatements="34" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -294,26 +294,33 @@
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
       </file>
     </package>
     <package name="domain.event.product.handler">
