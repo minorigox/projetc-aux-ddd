@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for domain/customer/event/address-customer-is-changed.event.ts</title>
+    <title>Code coverage report for domain/product/factory/product.factory.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">domain/customer/event</a> address-customer-is-changed.event.ts</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">domain/product/factory</a> product.factory.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
@@ -73,7 +73,14 @@
 <a name='L8'></a><a href='#L8'>8</a>
 <a name='L9'></a><a href='#L9'>9</a>
 <a name='L10'></a><a href='#L10'>10</a>
-<a name='L11'></a><a href='#L11'>11</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -81,17 +88,31 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import EventInterface from "../../@shared/event/event.interface";
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { v4 as uuid } from "uuid";
+import Product from "../entity/product";
+import ProductInterface from "../entity/product.interface";
+import ProductB from "../entity/product-b";
 &nbsp;
-export default class AddressCustomerIsChangedEvent implements EventInterface {
-    dataTimeOcurred: Date;
-    eventData: any;
-    
-    constructor(eventData: any) {
-        this.dataTimeOcurred = new Date();
-        this.eventData = eventData;
+export default class ProductFactory {
+&nbsp;
+    public static create(type: string, name: string, price: number): ProductInterface {
+        switch (type) {
+            case "a":
+                return new Product(uuid(), name, price);
+            case "b":
+                return new ProductB(uuid(), name, price);
+            default:
+                throw new Error("Product type not supported.");
+        }
     }
 }</pre></td></tr></table></pre>
 
